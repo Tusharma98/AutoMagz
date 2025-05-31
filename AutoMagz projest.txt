@@ -20,7 +20,7 @@ params = {
 response = requests.get(BASE_URL, params=params)
 articles = response.json().get("articles", [])
 if not articles:
-    print("⚠️ No articles found.")
+    print(" No articles found.")
     exit()
 
 os.makedirs("images", exist_ok=True)
@@ -64,7 +64,7 @@ text_y = (img_height - text_height) / 2
 draw.text((text_x, text_y), title_text, font=title_font, fill=(255, 255, 255))
 
 # Draw Date at Top-Right
-draw.text((img_width - 300, 60), f"📅 {date_today}", font=date_font_title, fill=(255, 255, 255))
+draw.text((img_width - 300, 60), f"{date_today}", font=date_font_title, fill=(255, 255, 255))
 
 # Paste Medium Logo at Bottom-Center with size 250x250
 try:
@@ -73,14 +73,14 @@ try:
     logo_x = (img_width - logo.width) // 2
     logo_y = img_height - logo.height - 50
     title_img.paste(logo, (logo_x, logo_y), logo)
-    print("✅ Logo added to title page.")
+    print("Logo added to title page.")
 except Exception as e:
-    print(f"⚠️ Failed to add logo to title page: {e}")
+    print(f"Failed to add logo to title page: {e}")
 
 # Save Title Image
 title_image_path = "images/title_page.jpg"
 title_img.save(title_image_path)
-print("✅ Title page image saved.")
+print("Title page image saved.")
 
 # === Setup PDF ===
 c = canvas.Canvas(pdf_path, pagesize=letter)
@@ -94,7 +94,7 @@ c.setFillColorRGB(1, 1, 1)
 c.setFont("Helvetica-Bold", 36)
 c.drawCentredString(pdf_width / 2, pdf_height / 2, title_text)
 c.setFont("Helvetica", 18)
-c.drawRightString(pdf_width - margin, margin + 30, f"📅 {date_today}")
+c.drawRightString(pdf_width - margin, margin + 30, f"{date_today}")
 c.showPage()
 
 # === Generate Article Images and PDF Pages ===
@@ -108,7 +108,7 @@ for idx, article in enumerate(articles, start=1):
         news.parse()
         full_text = news.text
     except:
-        full_text = "⚠️ Unable to fetch full article."
+        full_text = " Unable to fetch full article."
 
     img = Image.new("RGB", (img_width, img_height), bg_color)
     draw = ImageDraw.Draw(img)
@@ -120,20 +120,20 @@ for idx, article in enumerate(articles, start=1):
     wrapped_snippet = textwrap.fill(snippet, width=48)
     draw.text((60, 300), wrapped_snippet, font=snippet_font, fill=(255, 255, 255))
 
-    draw.text((60, img_height - 60), f"📅 {date_today}", font=date_font, fill=(240, 240, 240))
+    draw.text((60, img_height - 60), f" {date_today}", font=date_font, fill=(240, 240, 240))
 
     try:
         logo = Image.open(logo_path).convert("RGBA")
         logo = ImageOps.contain(logo, (100, 100))
         logo_position = (img_width - 100 - 30, img_height - 100 - 30)
         img.paste(logo, logo_position, logo)
-        print(f"✅ Logo added for article {idx}")
+        print(f" Logo added for article {idx}")
     except Exception as e:
-        print(f"⚠️ Failed to add logo for article {idx}: {e}")
+        print(f"Failed to add logo for article {idx}: {e}")
 
     image_file = f"images/article_{idx}.jpg"
     img.save(image_file)
-    print(f"✅ Image saved: {image_file}")
+    print(f"Image saved: {image_file}")
 
     # Add to PDF
     c.setFont("Helvetica-Bold", 14)
@@ -153,11 +153,11 @@ for idx, article in enumerate(articles, start=1):
     c.showPage()
 
 c.save()
-print(f"✅ PDF created at: {pdf_path}")
-print("✅ All article images and report generated successfully.")
+print(f"PDF created at: {pdf_path}")
+print("All article images and report generated successfully.")
 
 # === Prepare Instagram Caption with article links ===
-caption_lines = [f"📰 Today's Tech Highlights - {date_today}\n"]
+caption_lines = [f"Today's Tech Highlights - {date_today}\n"]
 caption_lines.append("Read the full articles below:\n")
 
 for idx, article in enumerate(articles, start=1):
@@ -176,9 +176,9 @@ PASSWORD = "PASSWORD"
 cl = Client()
 try:
     cl.login(USERNAME, PASSWORD)
-    print("✅ Logged into Instagram.")
+    print("Logged into Instagram.")
 except Exception as e:
-    print(f"❌ Failed to login: {e}")
+    print(f"Failed to login: {e}")
     exit()
 
 image_folder = "images"
@@ -196,6 +196,6 @@ try:
         paths=image_files,
         caption=instagram_caption
     )
-    print("✅ Uploaded all images as an Instagram carousel post.")
+    print("Uploaded all images as an Instagram carousel post.")
 except Exception as e:
-    print(f"❌ Failed to upload carousel post: {e}")
+    print(f" Failed to upload carousel post: {e}")
