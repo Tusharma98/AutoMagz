@@ -1,0 +1,10 @@
+AutoMagzNewsBot/
+│
+├── main.py               ← Main script to fetch, design, and post news
+├── config.py             ← Stores API keys and Instagram credentials
+├── requirements.txt      ← Dependencies (Pillow, Instagrapi, etc.)
+├── assets/
+│   └── logo.png          ← Logo added to the bottom corner of the image
+├── output/
+│   └── daily_magazine.jpg ← Final generated news image
+└── README.md             ← You're reading it!
