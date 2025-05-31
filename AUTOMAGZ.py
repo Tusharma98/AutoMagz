@@ -9,7 +9,7 @@ import textwrap
 import os
 
 # === Setup ===
-API_KEY = '3e96c5200617489a82b2baef51ff0bf9'
+API_KEY = 'YOUR_API_KEY'
 BASE_URL = 'https://newsapi.org/v2/top-headlines'
 params = {
     'category': 'technology',
@@ -170,8 +170,8 @@ caption_lines.append("#TechNews #Automation")
 instagram_caption = "\n".join(caption_lines)
 
 # === Upload to Instagram ===
-USERNAME = "automagz4"
-PASSWORD = "c.&q.tuCdAGM-2j"
+USERNAME = "YOUR_USERNAME"
+PASSWORD = "PASSWORD"
 
 cl = Client()
 try:
