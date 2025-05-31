@@ -10,7 +10,7 @@ This project is perfect for content automation, digital journalism, and tech por
 
 ✅ Fetches top headlines using [NewsAPI.org](https://newsapi.org) 
 
-✅ Automatically generates an image with a red gradient background
+✅ Automatically generates an image with a gradient background
 
 ✅ Add Auto caption with ful article link.  
 
