@@ -8,12 +8,17 @@ This project is perfect for content automation, digital journalism, and tech por
 
 ## 🚀 Features
 
-✅ Fetches top headlines using [NewsAPI.org](https://newsapi.org)  
+✅ Fetches top headlines using [NewsAPI.org](https://newsapi.org) 
+
 ✅ Automatically generates an image with a red gradient background
+
 ✅ Add Auto caption with ful article link.  
-✅ Adds logos, date, and news source branding  
+
+✅ Adds logos, date, and news source branding.
+
 ✅ Posts the news image to Instagram using [instagrapi](https://github.com/adw0rd/instagrapi)  
-✅ Can be scheduled to post daily with a cron job or cloud service
+
+✅ Can be scheduled to post daily with a cron job or cloud service.
 ---
 
 ## 🧠 How It Works
