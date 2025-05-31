@@ -19,6 +19,7 @@ This project is perfect for content automation, digital journalism, and tech por
 ✅ Posts the news image to Instagram using [instagrapi](https://github.com/adw0rd/instagrapi)  
 
 ✅ Can be scheduled to post daily with a cron job or cloud service.
+
 ---
 
 ## 🧠 How It Works
