@@ -1,6 +1,6 @@
 # 📰 AutoMagz Tech News Bot
 
-AutoMagz is an automated Instagram news magazine bot that fetches the latest headlines from **NewsAPI**, generates a visually appealing **red-gradient magazine-style image**, and uploads it directly to **Instagram** using Python.
+AutoMagz is an automated Instagram news magazine bot that fetches the latest headlines from **NewsAPI**, generates a visually appealing **gradient magazine-style image**, and uploads it directly to **Instagram** using Python.
 
 This project is perfect for content automation, digital journalism, and tech portfolios.
 
