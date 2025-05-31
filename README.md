@@ -12,7 +12,7 @@ This project is perfect for content automation, digital journalism, and tech por
 
 ✅ Automatically generates an image with a gradient background
 
-✅ Add Auto caption with ful article link.  
+✅ Add Auto caption with fulL article link.  
 
 ✅ Adds logos, date, and news source branding.
 
@@ -27,7 +27,7 @@ This project is perfect for content automation, digital journalism, and tech por
 1. Calls the NewsAPI to get the latest news from a specified country.
 2. Uses **Pillow** to create a vertical 1080x1350 magazine-style image.
 3. Adds:
-   - Gradient red background
+   - Gradient background
    - Headline (wrapped and styled)
    - Source, date, and bot handle
    - Logo (optional PNG/JPEG)
