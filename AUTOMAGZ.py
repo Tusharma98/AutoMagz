@@ -10,7 +10,7 @@ import os
 
 # === Setup ===
 API_KEY = 'YOUR_API_KEY'
-BASE_URL = 'https://newsapi.org/v2/top-headlines'
+BASE_URL = 'https://newsapi.org/v2/top-headlines' //take News api fom that link
 params = {
     'category': 'technology',
     'pageSize': 7,
@@ -170,8 +170,8 @@ caption_lines.append("#TechNews #Automation")
 instagram_caption = "\n".join(caption_lines)
 
 # === Upload to Instagram ===
-USERNAME = "YOUR_USERNAME"
-PASSWORD = "PASSWORD"
+USERNAME = "YOUR_USERNAME" //Enter your username
+PASSWORD = "PASSWORD" //Enter your password
 
 cl = Client()
 try:
